@@ -1,11 +1,11 @@
 #include "monty.h"
 
 /**
- * main - Monty bytecode interpreter
+ * Main - Monty bytecode interpreter
  * @argc: Arguments count.
  * @argv: Arguments vector.
  *
- * Return: EXIT_SUCCESS on success or EXIT_FAILURE on failure
+ * Return: EXIT_SUCCESS if success or EXIT_FAILURE if failure
  */
 
 int main(int argc, char **argv)
