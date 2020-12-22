@@ -14,7 +14,7 @@ void get_func(char *op_code, stack_t **stack, unsigned int line_number)
 	unsigned int i;
 	functions_t functions[] = {
 		{"push", stack_push},
-		{"pall", stack_pall},
+		{"pall", _pall},
 		{"pint", pint},
 		{"pop", pop},
 		{NULL, NULL}

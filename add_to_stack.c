@@ -5,7 +5,7 @@
  *
  * @head: Pointer to the first node of the stack.
  * @number: Element to add.
- * 
+ *
  * Return: void.
  */
 

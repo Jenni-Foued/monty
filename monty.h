@@ -40,7 +40,7 @@ typedef struct functions_s
 void get_func(char *op_code, stack_t **stack, unsigned int line_number);
 void stack_push(stack_t **stack, unsigned int line_number);
 void add_to_stack(stack_t **head, const int n);
-void stack_pall(stack_t **stack, unsigned int lin_number);
+void _pall(stack_t **stack, unsigned int lin_number);
 void pint(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
 
