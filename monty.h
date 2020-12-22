@@ -43,5 +43,8 @@ void add_to_stack(stack_t **head, const int n);
 void _pall(stack_t **stack, unsigned int lin_number);
 void pint(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
+void free_stack(int status, void *arg);
+void free_lineptr(int status, void *arg);
+void file_close(int status, void *arg);
 
 #endif /* MONTY_H */

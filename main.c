@@ -30,6 +30,9 @@ int main(int argc, char **argv)
 		printf("Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
+	on_exit(free_lineptr, &lineptr);
+	on_exit(free_stack, &stack);
+	on_exit(file_close, fd);
 	/* Interpret file line by line */
 	while (getline(&lineptr, &n, fd) != -1)
 	{
