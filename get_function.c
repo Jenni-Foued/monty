@@ -17,6 +17,7 @@ void get_func(char *op_code, stack_t **stack, unsigned int line_number)
 		{"pall", _pall},
 		{"pint", pint},
 		{"pop", pop},
+		{"swap", swap},
 		{NULL, NULL}
 	};
 
