@@ -1,6 +1,7 @@
 #ifndef MONTY_H
 #define MONTY_H
 
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -10,6 +11,7 @@
 #include <unistd.h>
 #include <ctype.h>
 
+
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -17,7 +19,7 @@
  * @next: points to the next element of the stack (or queue)
  *
  * Description: doubly linked list node structure
- * for stack, queues, LIFO, FIFO Holberton project
+ * for stack, queues, LIFO, FIFO Holberton school project
  */
 typedef struct stack_s
 {
@@ -52,5 +54,6 @@ void sub(stack_t **stack, unsigned int line_number);
 void free_stack(int status, void *arg);
 void free_lineptr(int status, void *arg);
 void file_close(int status, void *arg);
+
 
 #endif /* MONTY_H */
