@@ -22,7 +22,7 @@ void stack_push(stack_t **stack, unsigned int line_number)
 	}
 	if (value == NULL || checker)
 	{
-		printf("L%u: usage: push integer\n", line_number);
+		fprintf(stderr, "L%u: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	number = atoi(value);

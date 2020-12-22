@@ -19,7 +19,7 @@ int main(int argc, char **argv)
 	/* Verify the right usage of the program */
 	if (argc != 2)
 	{
-		fprintf(stderr,"USAGE: monty file\n");
+		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 	/* Open file */
@@ -27,7 +27,7 @@ int main(int argc, char **argv)
 	/* Check if the file is open */
 	if (fd == NULL)
 	{
-		fprintf(stderr,"Error: Can't open file %s\n", argv[1]);
+		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
 	on_exit(free_lineptr, &lineptr);

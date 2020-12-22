@@ -30,6 +30,6 @@ void get_func(char *op_code, stack_t **stack, unsigned int line_number)
 		}
 	}
 	/* In case function not found */
-	printf("L%u: unknown instruction %s\n", line_number, op_code);
+	fprintf(stderr, "L%u: unknown instruction %s\n", line_number, op_code);
 	exit(EXIT_FAILURE);
 }
