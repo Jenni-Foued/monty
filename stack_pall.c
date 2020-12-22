@@ -1,10 +1,10 @@
 #include "monty.h"
 
 /**
- * _pall - Print all elements of a stack.
+ * _pall - Print all elements of the stack
  *
- * @stack: Pointer to the first node of the stack.
- * @line_number: Current line being executed.
+ * @stack: Pointer to the first node of the stack
+ * @line_number: Current line being executed
  */
 
 void _pall(stack_t **stack, unsigned int __attribute__((unused))line_number)
