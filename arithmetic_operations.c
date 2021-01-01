@@ -23,7 +23,7 @@ void monty_div(stack_t **stack, unsigned int line_number)
 	}
 	n = (*stack)->n;
 	pop(stack, line_number);
-	(*stack)->n -= n;
+	(*stack)->n /= n;
 }
 
 /**
