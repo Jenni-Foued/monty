@@ -1,6 +1,27 @@
 #include "monty.h"
 
 /**
+ * monty_mul - multiplies the second top element of the stack
+ *  with the top element of the stack.
+ *
+ * @stack: Pointer to the begin of the stack
+ * @line_number: Current file line number of the opcode being executed
+ */
+void monty_mul(stack_t **stack, unsigned int line_number)
+{
+	int n;
+
+	if (!stack || !(*stack) || (*stack)->next == NULL)
+	{
+		fprintf(stderr, "L%u: can't mul, stack too short\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	n = (*stack)->n;
+	pop(stack, line_number);
+	(*stack)->n *= n;
+}
+
+/**
  * monty_div - divides the second top element of the stack
  * by the top element of the stack.
  *
