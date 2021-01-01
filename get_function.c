@@ -18,9 +18,10 @@ void get_func(char *op_code, stack_t **stack, unsigned int line_number)
 		{"pint", pint},
 		{"pop", pop},
 		{"swap", swap},
-		{"add", add},
+		{"add", monty_add},
 		{"nop", nop},
-		{"sub", sub},
+		{"sub", monty_sub},
+		{"div", monty_div},
 		{NULL, NULL}
 	};
 
