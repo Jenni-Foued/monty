@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * Main - Monty bytecode interpreter
+ * main - Monty bytecode interpreter
  * @argc: Arguments count.
  * @argv: Arguments vector.
  *
