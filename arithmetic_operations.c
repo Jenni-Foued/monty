@@ -1,6 +1,32 @@
 #include "monty.h"
 
 /**
+ * monty_mod - computes the rest of the division of the second top element of the stack
+ *  by the top element of the stack.
+ *
+ * @stack: Pointer to the begin of the stack
+ * @line_number: Current file line number of the opcode being executed
+ */
+void monty_mod(stack_t **stack, unsigned int line_number)
+{
+	int n;
+
+	if (!stack || !(*stack) || (*stack)->next == NULL)
+	{
+		fprintf(stderr, "L%u: can't mod, stack too short\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	if ((*stack)->n == 0)
+	{
+		fprintf(stderr, "L%u: division by zero\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	n = (*stack)->n;
+	pop(stack, line_number);
+	(*stack)->n %= n;
+}
+
+/**
  * monty_mul - multiplies the second top element of the stack
  *  with the top element of the stack.
  *

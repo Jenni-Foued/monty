@@ -23,6 +23,7 @@ void get_func(char *op_code, stack_t **stack, unsigned int line_number)
 		{"sub", monty_sub},
 		{"div", monty_div},
 		{"mul", monty_mul},
+		{"mod", monty_mod},
 		{NULL, NULL}
 	};
 
