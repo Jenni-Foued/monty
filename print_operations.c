@@ -7,21 +7,25 @@
  * @stack: Pointer to the begin of the stack
  * @line_number: Current file line number of the opcode being executed
  */
-void monty_pstr(stack_t **stack,
-unsigned int line_number __attribute__((unused)))
+void monty_pstr(stack_t **stack, unsigned int line_number)
 {
+	stack_t *temp;
+	int value;
 
-	while ((*stack))
+	(void)line_number;
+
+	temp = *stack;
+	while (temp != NULL)
 	{
-		if ((*stack)->n > 0 && (*stack)->n < 128)
-		{
-			printf("%c", (*stack)->n);
-		}
-		else
+		value = temp->n;
+		if (!isascii(value) || value == 0)
 			break;
-		(*stack) = (*stack)->next;
+		putchar(value);
+		temp = temp->next;
+		if (temp == *stack)
+			break;
 	}
-	printf("\n");
+	putchar('\n');
 }
 
 /**
