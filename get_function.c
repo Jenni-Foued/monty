@@ -26,6 +26,7 @@ void get_func(char *op_code, stack_t **stack, unsigned int line_number)
 		{"mod", monty_mod},
 		{"pchar", monty_pchar},
 		{"pstr", monty_pstr},
+		{"rotl", monty_rotl},
 		{NULL, NULL}
 	};
 
