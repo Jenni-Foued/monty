@@ -12,7 +12,7 @@ void monty_rotr(stack_t **stack, unsigned int line_number)
 
 	(void)line_number;
 
-	if (*stack)
+	if ((*stack)->next)
 	{
 		first_element = *stack;
 		last_element = *stack;
