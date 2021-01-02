@@ -50,6 +50,7 @@ void nop(stack_t **stack, unsigned int line_number);
 void monty_pchar(stack_t **stack, unsigned int line_number);
 void monty_pstr(stack_t **stack, unsigned int line_number);
 void monty_rotl(stack_t **stack, unsigned int line_number);
+void monty_rotr(stack_t **stack, unsigned int line_number);
 
 /* Arithmetic operations functions */
 void monty_add(stack_t **stack, unsigned int line_number);
