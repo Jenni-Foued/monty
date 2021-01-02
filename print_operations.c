@@ -1,8 +1,32 @@
 #include "monty.h"
 
 /**
- * monty_pchar - computes the rest of the division of the second top element of the stack
- *  by the top element of the stack.
+ * monty_pstr - prints the string starting at the top of the stack,
+ *  followed by a new line.
+ *
+ * @stack: Pointer to the begin of the stack
+ * @line_number: Current file line number of the opcode being executed
+ */
+void monty_pstr(stack_t **stack,
+unsigned int line_number __attribute__((unused)))
+{
+
+	while ((*stack))
+	{
+		if ((*stack)->n > 0 && (*stack)->n < 128)
+		{
+			printf("%c", (*stack)->n);
+		}
+		else
+			break;
+		(*stack) = (*stack)->next;
+	}
+	printf("\n");
+}
+
+/**
+ * monty_pchar - computes the rest of the division of
+ *  the second top element of the stackby the top element of the stack.
  *
  * @stack: Pointer to the begin of the stack
  * @line_number: Current file line number of the opcode being executed
